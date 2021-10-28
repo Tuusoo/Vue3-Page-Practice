@@ -1,11 +1,13 @@
 <template>
   <TopHeaderVue />
   <TopMenuVue />
+  <CoverPageVue />
 </template>
 
 <script>
 import TopHeaderVue from "./smallpages/TopHeader.vue"
 import TopMenuVue from "./smallpages/TopMenu.vue"
+import CoverPageVue from "./smallpages/CoverPage.vue"
 
 export default {
   name: "",
@@ -13,6 +15,7 @@ export default {
   components: {
     TopHeaderVue,
     TopMenuVue,
+    CoverPageVue,
   },
   props: {},
   data() {
@@ -46,6 +49,11 @@ export default {
 @font-face {
   font-family: "Barlow-SemiBold";
   src: url(./fonts/Barlow-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Barlow-ExtraBold";
+  src: url(./fonts/Barlow-ExtraBold.ttf);
 }
 
 body {

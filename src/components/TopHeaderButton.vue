@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "",
+  name: "TopHeadButton",
   inheritAttrs: false,
   components: {},
   props: {

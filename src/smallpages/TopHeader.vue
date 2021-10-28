@@ -29,18 +29,6 @@
 export default {
   name: "TopHeader",
   inheritAttrs: false,
-  components: {},
-  props: {},
-  data() {
-    return {};
-  },
-  computed: {},
-  watch: {},
-  created() {},
-  mounted() {},
-  beforeUnmount() {},
-  unmounted() {},
-  methods: {},
 };
 </script> 
 
@@ -61,7 +49,7 @@ export default {
     .location {
       display: flex;
       align-items: center;
-      margin-right: 20px;
+      margin-right: 30px;
       img {
         width: 15px;
         margin-right: 10px;
@@ -91,7 +79,7 @@ export default {
       display: flex;
 
       img {
-        width: 18px;
+        width: 17px;
         margin-left: 20px;
       }
     }

@@ -16,7 +16,7 @@
 import TopHeaderButtonVue from "../components/TopHeaderButton.vue";
 
 export default {
-  name: "",
+  name: "TopMenu",
   inheritAttrs: false,
   components: {
     TopHeaderButtonVue,
