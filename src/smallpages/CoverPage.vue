@@ -25,13 +25,20 @@
       ></span>
     </div>
   </div>
+  <div class="logo-banner">
+    <div class="logo-container">
+      <div class="img-container" v-for="i in logos" :key="i">
+        <img :src="i" @mouseover="changeToWhite" @mouseout="changeToGray" />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 import BigButtonVue from "../components/BigButton.vue";
 
 export default {
-  name: "",
+  name: "CoverPage",
   inheritAttrs: false,
   components: {
     BigButtonVue,
@@ -50,6 +57,14 @@ export default {
       electricFadeIn: "electric",
       titleArea: "title-area",
       backgroundImg: "background-img",
+      logos: [
+        require("../assets/brand-1-1.png"),
+        require("../assets/brand-1-2.png"),
+        require("../assets/brand-1-3.png"),
+        require("../assets/brand-1-4.png"),
+        require("../assets/brand-1-5.png"),
+        require("../assets/brand-1-6.png"),
+      ],
     };
   },
   computed: {},
@@ -103,6 +118,12 @@ export default {
     turnToPage(index) {
       this.currentPage = index;
     },
+    changeToWhite(e) {
+      e.currentTarget.style.opacity = "1";
+    },
+    changeToGray(e) {
+      e.currentTarget.style.opacity = "0.3";
+    }
   },
 };
 </script> 
@@ -233,6 +254,33 @@ export default {
     to {
       right: 0;
       opacity: 1;
+    }
+  }
+}
+
+.logo-banner {
+  background: #1b1825;
+  padding: 100px calc((100vw - 1200px) / 2) 200px;
+  overflow: hidden;
+
+  .logo-container {
+    display: flex;
+    justify-content: space-between;
+    overflow: scroll;
+    width: 1200px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .img-container {
+      width: 200px;
+
+      img {
+        width: 150px;
+        opacity: 0.3;
+        transition: all 0.5s;
+      }
     }
   }
 }
