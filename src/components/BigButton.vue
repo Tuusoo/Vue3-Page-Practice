@@ -1,5 +1,11 @@
 <template>
-  <div class="big-button">DISCOVER MORE</div>
+  <div class="big-button" @mouseover="hovering" @mouseout="unHovering">
+    <span>DISCOVER MORE</span>
+    <span
+      class="black-block"
+      :style="isHover ? 'height: 100%' : 'height: 0'"
+    ></span>
+  </div>
 </template>
 
 <script>
@@ -9,7 +15,9 @@ export default {
   components: {},
   props: {},
   data() {
-    return {};
+    return {
+      isHover: false,
+    };
   },
   computed: {},
   watch: {},
@@ -17,7 +25,14 @@ export default {
   mounted() {},
   beforeUnmount() {},
   unmounted() {},
-  methods: {},
+  methods: {
+    hovering() {
+      this.isHover = true;
+    },
+    unHovering() {
+      this.isHover = false;
+    },
+  },
 };
 </script> 
 
@@ -37,17 +52,22 @@ export default {
   background: #1989fb;
   cursor: pointer;
   user-select: none;
+  overflow: hidden;
 
-  &::after {
+  span {
+    position: relative;
+    z-index: 2;
+  }
+
+  .black-block {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
-    border-radius: 7px;
     content: "";
-    height: 100%;
     width: 100%;
     background: #1b1825;
-    z-index: -1;
+    z-index: 1;
+    transition: all 0.5s;
   }
 }
 </style>

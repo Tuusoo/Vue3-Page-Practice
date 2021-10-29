@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import TopHeaderVue from "./smallpages/TopHeader.vue"
-import TopMenuVue from "./smallpages/TopMenu.vue"
-import CoverPageVue from "./smallpages/CoverPage.vue"
+import TopHeaderVue from "./smallpages/TopHeader.vue";
+import TopMenuVue from "./smallpages/TopMenu.vue";
+import CoverPageVue from "./smallpages/CoverPage.vue";
 
 export default {
   name: "",
@@ -19,20 +19,16 @@ export default {
   },
   props: {},
   data() {
-    return {}
+    return {};
   },
   computed: {},
   watch: {},
-  created() {
-  },
-  mounted() {
-  },
-  beforeUnmount() {
-  },
-  unmounted() {
-  },
+  created() {},
+  mounted() {},
+  beforeUnmount() {},
+  unmounted() {},
   methods: {},
-}
+};
 </script> 
 
 <style>
@@ -58,5 +54,7 @@ export default {
 
 body {
   margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
 }
 </style>
