@@ -31,17 +31,29 @@
         <img :src="i" @mouseover="changeToWhite" @mouseout="changeToGray" />
       </div>
     </div>
+    <div class="cards">
+      <CardVue v-for="i in cards" :key="i" :title="i" />
+    </div>
+  </div>
+  <div class="gray-area">
+    <div class="text">
+      IT services built specifically for your business.
+      <a href="#">Find Your Solution</a>
+    </div>
+    <div class="gray-line"></div>
   </div>
 </template>
 
 <script>
 import BigButtonVue from "../components/BigButton.vue";
+import CardVue from "../components/Card.vue";
 
 export default {
   name: "CoverPage",
   inheritAttrs: false,
   components: {
     BigButtonVue,
+    CardVue,
   },
   props: {},
   data() {
@@ -65,6 +77,7 @@ export default {
         require("../assets/brand-1-5.png"),
         require("../assets/brand-1-6.png"),
       ],
+      cards: ["IT Management", "Cyber Security", "PC Computing"],
     };
   },
   computed: {},
@@ -123,7 +136,7 @@ export default {
     },
     changeToGray(e) {
       e.currentTarget.style.opacity = "0.3";
-    }
+    },
   },
 };
 </script> 
@@ -136,8 +149,6 @@ export default {
   width: 100vw;
   height: 100vh;
   background: #1b1825;
-  overflow: hidden;
-
   .background-img {
     height: 110%;
     position: absolute;
@@ -259,9 +270,11 @@ export default {
 }
 
 .logo-banner {
+  position: relative;
   background: #1b1825;
+  box-sizing: border-box;
+  height: 400px;
   padding: 100px calc((100vw - 1200px) / 2) 200px;
-  overflow: hidden;
 
   .logo-container {
     display: flex;
@@ -282,6 +295,47 @@ export default {
         transition: all 0.5s;
       }
     }
+  }
+
+  .cards {
+    position: relative;
+    z-index: 1;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    transform: translate(0, 100px);
+  }
+}
+
+.gray-area {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fefefe;
+
+  .text {
+    font-family: "Barlow-Medium";
+    color: #7b7981;
+    transform: translate(0, 50px);
+
+    a {
+      color: #1989fb;
+      transition: color 0.5s;
+      &:hover {
+        color: #42d8bd;
+      }
+    }
+  }
+
+  .gray-line {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 1200px;
+    border-bottom: 1px solid #dae3e9;
   }
 }
 </style>

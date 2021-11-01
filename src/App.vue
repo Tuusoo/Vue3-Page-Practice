@@ -2,12 +2,16 @@
   <TopHeaderVue />
   <TopMenuVue />
   <CoverPageVue />
+  <KnowAboutUsVue />
+  <WhatWeOfferingVue />
 </template>
 
 <script>
 import TopHeaderVue from "./smallpages/TopHeader.vue";
 import TopMenuVue from "./smallpages/TopMenu.vue";
 import CoverPageVue from "./smallpages/CoverPage.vue";
+import KnowAboutUsVue from "./smallpages/KnowAboutUs.vue";
+import WhatWeOfferingVue from "./smallpages/WhatWeOffering.vue";
 
 export default {
   name: "",
@@ -16,6 +20,8 @@ export default {
     TopHeaderVue,
     TopMenuVue,
     CoverPageVue,
+    KnowAboutUsVue,
+    WhatWeOfferingVue,
   },
   props: {},
   data() {

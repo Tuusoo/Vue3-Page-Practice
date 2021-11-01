@@ -46,6 +46,7 @@ export default {
   align-items: center;
   position: sticky;
   background: #ffffff;
+  box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 5%);
   top: 0;
   z-index: 100;
 

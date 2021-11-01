@@ -66,6 +66,7 @@ export default {
     color: #7b7981;
     margin-left: 10px;
     cursor: pointer;
+    transition: all 0.5s;
   }
 
   &.hovered {
@@ -75,6 +76,7 @@ export default {
 
     .text {
       font-family: "Barlow-SemiBold";
+      color: #000000;
     }
   }
 }
