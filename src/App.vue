@@ -4,6 +4,10 @@
   <CoverPageVue />
   <KnowAboutUsVue />
   <WhatWeOfferingVue />
+  <ExploreProjectsVue />
+  <ImproveAndInnovateVue />
+  <TalkingAboutVue />
+  <NewsArticlesVue />
 </template>
 
 <script>
@@ -12,6 +16,10 @@ import TopMenuVue from "./smallpages/TopMenu.vue";
 import CoverPageVue from "./smallpages/CoverPage.vue";
 import KnowAboutUsVue from "./smallpages/KnowAboutUs.vue";
 import WhatWeOfferingVue from "./smallpages/WhatWeOffering.vue";
+import ExploreProjectsVue from "./smallpages/ExploreProjects.vue";
+import ImproveAndInnovateVue from "./smallpages/ImproveAndInnovate.vue";
+import TalkingAboutVue from "./smallpages/TalkingAbout.vue";
+import NewsArticlesVue from "./smallpages/NewsArticles.vue";
 
 export default {
   name: "",
@@ -22,6 +30,10 @@ export default {
     CoverPageVue,
     KnowAboutUsVue,
     WhatWeOfferingVue,
+    ExploreProjectsVue,
+    ImproveAndInnovateVue,
+    TalkingAboutVue,
+    NewsArticlesVue,
   },
   props: {},
   data() {
@@ -38,6 +50,11 @@ export default {
 </script> 
 
 <style>
+@font-face {
+  font-family: "Barlow-Light";
+  src: url(./fonts/Barlow-Light.ttf);
+}
+
 @font-face {
   font-family: "Barlow-Regular";
   src: url(./fonts/Barlow-Regular.ttf);
