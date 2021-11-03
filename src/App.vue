@@ -8,6 +8,7 @@
   <ImproveAndInnovateVue />
   <TalkingAboutVue />
   <NewsArticlesVue />
+  <EndPageVue />
 </template>
 
 <script>
@@ -20,6 +21,7 @@ import ExploreProjectsVue from "./smallpages/ExploreProjects.vue";
 import ImproveAndInnovateVue from "./smallpages/ImproveAndInnovate.vue";
 import TalkingAboutVue from "./smallpages/TalkingAbout.vue";
 import NewsArticlesVue from "./smallpages/NewsArticles.vue";
+import EndPageVue from "./smallpages/EndPage.vue";
 
 export default {
   name: "",
@@ -34,6 +36,7 @@ export default {
     ImproveAndInnovateVue,
     TalkingAboutVue,
     NewsArticlesVue,
+    EndPageVue,
   },
   props: {},
   data() {

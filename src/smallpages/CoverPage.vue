@@ -100,7 +100,7 @@ export default {
         this.electricFadeIn = "electric fadeInLeft";
         this.titleArea = "title-area fadeInUp";
         this.backgroundImg = "background-img fadeInBigger";
-      }, 0);
+      }, 100);
       this.setTimer();
     },
   },
@@ -150,7 +150,7 @@ export default {
   height: 100vh;
   background: #1b1825;
   .background-img {
-    height: 110%;
+    height: 100%;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -159,7 +159,7 @@ export default {
     opacity: 0.3;
     -webkit-user-drag: none;
     &.fadeInBigger {
-      animation: fadeInBigger 3.5s;
+      animation: fadeInBigger 4s;
     }
   }
 
@@ -174,11 +174,12 @@ export default {
 
   .title-area {
     position: absolute;
-    top: 50vh;
+    top: 60vh;
+    opacity: 0.5;
     transform: translate(0, -50%);
     color: #ffffff;
     &.fadeInUp {
-      animation: fadeInUp 2s;
+      animation: fadeInUp 4s;
     }
 
     .page-title {
@@ -194,11 +195,15 @@ export default {
   }
 
   @keyframes fadeInUp {
-    from {
+    0% {
       top: 60vh;
       opacity: 0.5;
     }
-    to {
+    50% {
+      top: 50vh;
+      opacity: 1;
+    }
+    100% {
       top: 50vh;
       opacity: 1;
     }
@@ -224,11 +229,12 @@ export default {
   .electric {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: -200px;
+    opacity: 0;
     height: 400px;
 
     &.fadeInLeft {
-      animation: fadeInLeft 2s;
+      animation: fadeInLeft 4s;
     }
   }
 
@@ -258,11 +264,15 @@ export default {
   }
 
   @keyframes fadeInLeft {
-    from {
+    0% {
       right: -200px;
       opacity: 0;
     }
-    to {
+    50% {
+      right: 0;
+      opacity: 1;
+    }
+    100% {
       right: 0;
       opacity: 1;
     }

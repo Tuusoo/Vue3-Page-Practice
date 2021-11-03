@@ -155,6 +155,7 @@ export default {
     transition: all 0.5s;
     box-sizing: border-box;
     margin-top: 30px;
+    cursor: pointer;
 
     img {
       width: 40px;
